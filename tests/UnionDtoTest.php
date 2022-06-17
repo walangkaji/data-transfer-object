@@ -1,10 +1,10 @@
 <?php
 
-namespace Spatie\DataTransferObject\Tests;
+namespace Walangkaji\DataTransferObject\Tests;
 
-use Spatie\DataTransferObject\Attributes\CastWith;
-use Spatie\DataTransferObject\DataTransferObject;
-use Spatie\DataTransferObject\Tests\Dummy\RoundingCaster;
+use Walangkaji\DataTransferObject\Attributes\CastWith;
+use Walangkaji\DataTransferObject\DataTransferObject;
+use Walangkaji\DataTransferObject\Tests\Dummy\RoundingCaster;
 
 class UnionDtoTest extends TestCase
 {

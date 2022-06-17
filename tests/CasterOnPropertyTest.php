@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\DataTransferObject\Tests;
+namespace Walangkaji\DataTransferObject\Tests;
 
-use Spatie\DataTransferObject\Attributes\CastWith;
-use Spatie\DataTransferObject\DataTransferObject;
-use Spatie\DataTransferObject\Tests\Dummy\ComplexObject;
-use Spatie\DataTransferObject\Tests\Dummy\ComplexObjectCaster;
+use Walangkaji\DataTransferObject\Attributes\CastWith;
+use Walangkaji\DataTransferObject\DataTransferObject;
+use Walangkaji\DataTransferObject\Tests\Dummy\ComplexObject;
+use Walangkaji\DataTransferObject\Tests\Dummy\ComplexObjectCaster;
 
 class CasterOnPropertyTest extends TestCase
 {

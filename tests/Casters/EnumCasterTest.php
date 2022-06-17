@@ -1,15 +1,15 @@
 <?php
 
-namespace Spatie\DataTransferObject\Tests\Casters;
+namespace Walangkaji\DataTransferObject\Tests\Casters;
 
 use LogicException;
-use Spatie\DataTransferObject\Attributes\CastWith;
-use Spatie\DataTransferObject\Casters\EnumCaster;
-use Spatie\DataTransferObject\DataTransferObject;
-use Spatie\DataTransferObject\Tests\Stubs\IntegerEnum;
-use Spatie\DataTransferObject\Tests\Stubs\SimpleEnum;
-use Spatie\DataTransferObject\Tests\Stubs\StringEnum;
-use Spatie\DataTransferObject\Tests\TestCase;
+use Walangkaji\DataTransferObject\Attributes\CastWith;
+use Walangkaji\DataTransferObject\Casters\EnumCaster;
+use Walangkaji\DataTransferObject\DataTransferObject;
+use Walangkaji\DataTransferObject\Tests\Stubs\IntegerEnum;
+use Walangkaji\DataTransferObject\Tests\Stubs\SimpleEnum;
+use Walangkaji\DataTransferObject\Tests\Stubs\StringEnum;
+use Walangkaji\DataTransferObject\Tests\TestCase;
 
 /** @requires PHP >= 8.1 */
 class EnumCasterTest extends TestCase

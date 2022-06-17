@@ -1,11 +1,11 @@
 <?php
 
-namespace Spatie\DataTransferObject\Tests;
+namespace Walangkaji\DataTransferObject\Tests;
 
-use Spatie\DataTransferObject\Arr;
-use Spatie\DataTransferObject\Attributes\MapFrom;
-use Spatie\DataTransferObject\Attributes\MapTo;
-use Spatie\DataTransferObject\DataTransferObject;
+use Walangkaji\DataTransferObject\Arr;
+use Walangkaji\DataTransferObject\Attributes\MapFrom;
+use Walangkaji\DataTransferObject\Attributes\MapTo;
+use Walangkaji\DataTransferObject\DataTransferObject;
 
 class MapToTest extends TestCase
 {

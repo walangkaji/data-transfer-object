@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\DataTransferObject\Tests;
+namespace Walangkaji\DataTransferObject\Tests;
 
 use Attribute;
 use DateTimeImmutable;
-use Spatie\DataTransferObject\Attributes\DefaultCast;
-use Spatie\DataTransferObject\Caster;
-use Spatie\DataTransferObject\DataTransferObject;
+use Walangkaji\DataTransferObject\Attributes\DefaultCast;
+use Walangkaji\DataTransferObject\Caster;
+use Walangkaji\DataTransferObject\DataTransferObject;
 
 class DefaultCasterTest extends TestCase
 {

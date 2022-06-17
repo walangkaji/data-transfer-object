@@ -1,10 +1,10 @@
 <?php
 
-namespace Spatie\DataTransferObject\Tests;
+namespace Walangkaji\DataTransferObject\Tests;
 
-use Spatie\DataTransferObject\Attributes\Strict;
-use Spatie\DataTransferObject\DataTransferObject;
-use Spatie\DataTransferObject\Exceptions\UnknownProperties;
+use Walangkaji\DataTransferObject\Attributes\Strict;
+use Walangkaji\DataTransferObject\DataTransferObject;
+use Walangkaji\DataTransferObject\Exceptions\UnknownProperties;
 
 class StrictDtoTest extends TestCase
 {

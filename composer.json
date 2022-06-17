@@ -1,5 +1,5 @@
 {
-    "name": "spatie/data-transfer-object",
+    "name": "walangkaji/data-transfer-object",
     "description": "Data transfer objects with batteries included",
     "keywords": [
         "spatie",
@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\DataTransferObject\\": "src"
+            "Walangkaji\\DataTransferObject\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\DataTransferObject\\Tests\\": "tests"
+            "Walangkaji\\DataTransferObject\\Tests\\": "tests"
         }
     },
     "scripts": {

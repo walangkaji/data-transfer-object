@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\DataTransferObject\Attributes;
+namespace Walangkaji\DataTransferObject\Attributes;
 
 use Attribute;
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\DataTransferObject\Reflection;
+namespace Walangkaji\DataTransferObject\Reflection;
 
 use ReflectionClass;
 use ReflectionProperty;
-use Spatie\DataTransferObject\Attributes\Strict;
-use Spatie\DataTransferObject\DataTransferObject;
-use Spatie\DataTransferObject\Exceptions\ValidationException;
+use Walangkaji\DataTransferObject\Attributes\Strict;
+use Walangkaji\DataTransferObject\DataTransferObject;
+use Walangkaji\DataTransferObject\Exceptions\ValidationException;
 
 class DataTransferObjectClass
 {
@@ -23,7 +23,7 @@ class DataTransferObjectClass
     }
 
     /**
-     * @return \Spatie\DataTransferObject\Reflection\DataTransferObjectProperty[]
+     * @return \Walangkaji\DataTransferObject\Reflection\DataTransferObjectProperty[]
      */
     public function getProperties(): array
     {

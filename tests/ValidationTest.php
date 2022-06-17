@@ -1,10 +1,10 @@
 <?php
 
-namespace Spatie\DataTransferObject\Tests;
+namespace Walangkaji\DataTransferObject\Tests;
 
-use Spatie\DataTransferObject\DataTransferObject;
-use Spatie\DataTransferObject\Exceptions\ValidationException;
-use Spatie\DataTransferObject\Tests\Dummy\NumberBetween;
+use Walangkaji\DataTransferObject\DataTransferObject;
+use Walangkaji\DataTransferObject\Exceptions\ValidationException;
+use Walangkaji\DataTransferObject\Tests\Dummy\NumberBetween;
 
 class ValidationTest extends TestCase
 {

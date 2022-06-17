@@ -1,10 +1,10 @@
 <?php
 
-namespace Spatie\DataTransferObject\Attributes;
+namespace Walangkaji\DataTransferObject\Attributes;
 
 use Attribute;
-use Spatie\DataTransferObject\Caster;
-use Spatie\DataTransferObject\Exceptions\InvalidCasterClass;
+use Walangkaji\DataTransferObject\Caster;
+use Walangkaji\DataTransferObject\Exceptions\InvalidCasterClass;
 
 #[Attribute(Attribute::TARGET_CLASS | Attribute::TARGET_PROPERTY)]
 class CastWith

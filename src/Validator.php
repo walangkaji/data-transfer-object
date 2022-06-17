@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\DataTransferObject;
+namespace Walangkaji\DataTransferObject;
 
-use Spatie\DataTransferObject\Validation\ValidationResult;
+use Walangkaji\DataTransferObject\Validation\ValidationResult;
 
 interface Validator
 {

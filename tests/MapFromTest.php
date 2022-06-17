@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\DataTransferObject\Tests;
+namespace Walangkaji\DataTransferObject\Tests;
 
-use Spatie\DataTransferObject\Attributes\MapFrom;
-use Spatie\DataTransferObject\DataTransferObject;
+use Walangkaji\DataTransferObject\Attributes\MapFrom;
+use Walangkaji\DataTransferObject\DataTransferObject;
 
 class MapFromTest extends TestCase
 {

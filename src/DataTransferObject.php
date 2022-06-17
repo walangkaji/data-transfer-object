@@ -1,25 +1,21 @@
 <?php
 
-namespace Spatie\DataTransferObject;
+namespace Walangkaji\DataTransferObject;
 
 use ReflectionClass;
 use ReflectionProperty;
-use Spatie\DataTransferObject\Attributes\CastWith;
-use Spatie\DataTransferObject\Attributes\MapTo;
-use Spatie\DataTransferObject\Casters\DataTransferObjectCaster;
-use Spatie\DataTransferObject\Exceptions\UnknownProperties;
-use Spatie\DataTransferObject\Reflection\DataTransferObjectClass;
+use Walangkaji\DataTransferObject\Attributes\CastWith;
+use Walangkaji\DataTransferObject\Attributes\MapTo;
+use Walangkaji\DataTransferObject\Casters\DataTransferObjectCaster;
+use Walangkaji\DataTransferObject\Exceptions\UnknownProperties;
+use Walangkaji\DataTransferObject\Reflection\DataTransferObjectClass;
 
 #[CastWith(DataTransferObjectCaster::class)]
 abstract class DataTransferObject
 {
-    protected array $exceptKeys = [];
-
-    protected array $onlyKeys = [];
-
     public function __construct(...$args)
     {
-        if (is_array($args[0] ?? null)) {
+        if (\is_array($args[0] ?? null)) {
             $args = $args[0];
         }
 
@@ -31,14 +27,14 @@ abstract class DataTransferObject
             $args = Arr::forget($args, $property->name);
         }
 
-        if ($class->isStrict() && count($args)) {
+        if ($class->isStrict() && \count($args)) {
             throw UnknownProperties::new(static::class, array_keys($args));
         }
 
         $class->validate();
     }
 
-    public static function arrayOf(array $arrayOfParameters): array
+    protected static function arrayOf(array $arrayOfParameters): array
     {
         return array_map(
             fn (mixed $parameters) => new static($parameters),
@@ -46,7 +42,7 @@ abstract class DataTransferObject
         );
     }
 
-    public function all(): array
+    protected function all(): array
     {
         $data = [];
 
@@ -60,7 +56,7 @@ abstract class DataTransferObject
             }
 
             $mapToAttribute = $property->getAttributes(MapTo::class);
-            $name = count($mapToAttribute) ? $mapToAttribute[0]->newInstance()->name : $property->getName();
+            $name           = \count($mapToAttribute) ? $mapToAttribute[0]->newInstance()->name : $property->getName();
 
             $data[$name] = $property->getValue($this);
         }
@@ -68,40 +64,14 @@ abstract class DataTransferObject
         return $data;
     }
 
-    public function only(string ...$keys): static
-    {
-        $dataTransferObject = clone $this;
-
-        $dataTransferObject->onlyKeys = [...$this->onlyKeys, ...$keys];
-
-        return $dataTransferObject;
-    }
-
-    public function except(string ...$keys): static
-    {
-        $dataTransferObject = clone $this;
-
-        $dataTransferObject->exceptKeys = [...$this->exceptKeys, ...$keys];
-
-        return $dataTransferObject;
-    }
-
-    public function clone(...$args): static
+    protected function clone(...$args): static
     {
         return new static(...array_merge($this->toArray(), $args));
     }
 
     public function toArray(): array
     {
-        if (count($this->onlyKeys)) {
-            $array = Arr::only($this->all(), $this->onlyKeys);
-        } else {
-            $array = Arr::except($this->all(), $this->exceptKeys);
-        }
-
-        $array = $this->parseArray($array);
-
-        return $array;
+        return $this->parseArray($this->all());
     }
 
     protected function parseArray(array $array): array
@@ -113,7 +83,7 @@ abstract class DataTransferObject
                 continue;
             }
 
-            if (! is_array($value)) {
+            if (! \is_array($value)) {
                 continue;
             }
 

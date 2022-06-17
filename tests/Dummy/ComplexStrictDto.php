@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\DataTransferObject\Tests\Dummy;
+namespace Walangkaji\DataTransferObject\Tests\Dummy;
 
-use Spatie\DataTransferObject\Attributes\Strict;
-use Spatie\DataTransferObject\DataTransferObject;
+use Walangkaji\DataTransferObject\Attributes\Strict;
+use Walangkaji\DataTransferObject\DataTransferObject;
 
 #[Strict]
 class ComplexStrictDto extends DataTransferObject

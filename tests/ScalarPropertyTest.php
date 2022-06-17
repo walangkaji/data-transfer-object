@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\DataTransferObject\Tests;
+namespace Walangkaji\DataTransferObject\Tests;
 
-use Spatie\DataTransferObject\DataTransferObject;
+use Walangkaji\DataTransferObject\DataTransferObject;
 
 class ScalarPropertyTest extends TestCase
 {

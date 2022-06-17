@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\DataTransferObject\Tests;
+namespace Walangkaji\DataTransferObject\Tests;
 
-use Spatie\DataTransferObject\DataTransferObject;
-use Spatie\DataTransferObject\Tests\Dummy\ComplexObjectWithCaster;
+use Walangkaji\DataTransferObject\DataTransferObject;
+use Walangkaji\DataTransferObject\Tests\Dummy\ComplexObjectWithCaster;
 
 class CasterOnObjectTest extends TestCase
 {

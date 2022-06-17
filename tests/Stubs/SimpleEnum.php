@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\DataTransferObject\Tests\Stubs;
+namespace Walangkaji\DataTransferObject\Tests\Stubs;
 
 enum SimpleEnum
 {

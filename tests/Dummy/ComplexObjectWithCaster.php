@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\DataTransferObject\Tests\Dummy;
+namespace Walangkaji\DataTransferObject\Tests\Dummy;
 
-use Spatie\DataTransferObject\Attributes\CastWith;
+use Walangkaji\DataTransferObject\Attributes\CastWith;
 
 #[CastWith(ComplexObjectWithCasterCaster::class)]
 class ComplexObjectWithCaster

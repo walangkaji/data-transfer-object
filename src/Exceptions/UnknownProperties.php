@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\DataTransferObject\Exceptions;
+namespace Walangkaji\DataTransferObject\Exceptions;
 
 use Exception;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\DataTransferObject\Tests;
+namespace Walangkaji\DataTransferObject\Tests;
 
 use ArrayAccess;
 use ArrayIterator;
@@ -9,9 +9,9 @@ use Illuminate\Support\Collection;
 use Iterator;
 use IteratorAggregate;
 use LogicException;
-use Spatie\DataTransferObject\Attributes\CastWith;
-use Spatie\DataTransferObject\Casters\ArrayCaster;
-use Spatie\DataTransferObject\DataTransferObject;
+use Walangkaji\DataTransferObject\Attributes\CastWith;
+use Walangkaji\DataTransferObject\Casters\ArrayCaster;
+use Walangkaji\DataTransferObject\DataTransferObject;
 
 class CustomCasterArgumentsTest extends TestCase
 {
@@ -261,33 +261,33 @@ class CustomCasterArgumentsTest extends TestCase
 
 class Bar extends DataTransferObject
 {
-    /** @var \Spatie\DataTransferObject\Tests\Foo[] */
+    /** @var \Walangkaji\DataTransferObject\Tests\Foo[] */
     #[CastWith(ArrayCaster::class, itemType: Foo::class)]
     public array $collectionOfFoo;
 
-    /** @var \Spatie\DataTransferObject\Tests\Baz[] */
+    /** @var \Walangkaji\DataTransferObject\Tests\Baz[] */
     #[CastWith(ArrayCaster::class, itemType: Baz::class)]
     public array $collectionOfBaz;
 }
 
 class BarJr extends DataTransferObject
 {
-    /** @var \Spatie\DataTransferObject\Tests\Foo[] */
+    /** @var \Walangkaji\DataTransferObject\Tests\Foo[] */
     #[CastWith(ArrayCaster::class, itemType: Foo::class)]
     public Collection $collectionOfFoo;
 
-    /** @var \Spatie\DataTransferObject\Tests\Baz[] */
+    /** @var \Walangkaji\DataTransferObject\Tests\Baz[] */
     #[CastWith(ArrayCaster::class, itemType: Baz::class)]
     public Collection $collectionOfBaz;
 }
 
 class BarIllogical extends DataTransferObject
 {
-    /** @var \Spatie\DataTransferObject\Tests\Foo[] */
+    /** @var \Walangkaji\DataTransferObject\Tests\Foo[] */
     #[CastWith(ArrayCaster::class, itemType: Foo::class)]
     public string $collectionOfFoo;
 
-    /** @var \Spatie\DataTransferObject\Tests\Baz[] */
+    /** @var \Walangkaji\DataTransferObject\Tests\Baz[] */
     #[CastWith(ArrayCaster::class, itemType: Baz::class)]
     public int $collectionOfBaz;
 }
@@ -371,44 +371,44 @@ class ArrayAccessIterator extends ArrayAccessImplementation implements Iterator
 
 class DTOWithArrayAccessImplementation extends DataTransferObject
 {
-    /** @var \Spatie\DataTransferObject\Tests\Foo[] */
+    /** @var \Walangkaji\DataTransferObject\Tests\Foo[] */
     #[CastWith(ArrayCaster::class, itemType: Foo::class)]
     public ArrayAccessImplementation $collectionOfFoo;
 
-    /** @var \Spatie\DataTransferObject\Tests\Baz[] */
+    /** @var \Walangkaji\DataTransferObject\Tests\Baz[] */
     #[CastWith(ArrayCaster::class, itemType: Baz::class)]
     public ArrayAccessImplementation $collectionOfBaz;
 }
 
 class DTOWithArrayAccessIteratorAggregate extends DataTransferObject
 {
-    /** @var \Spatie\DataTransferObject\Tests\Foo[] */
+    /** @var \Walangkaji\DataTransferObject\Tests\Foo[] */
     #[CastWith(ArrayCaster::class, itemType: Foo::class)]
     public ArrayAccessIteratorAggregate $collectionOfFoo;
 
-    /** @var \Spatie\DataTransferObject\Tests\Baz[] */
+    /** @var \Walangkaji\DataTransferObject\Tests\Baz[] */
     #[CastWith(ArrayCaster::class, itemType: Baz::class)]
     public ArrayAccessIteratorAggregate $collectionOfBaz;
 }
 
 class DTOWithArrayAccessIterator extends DataTransferObject
 {
-    /** @var \Spatie\DataTransferObject\Tests\Foo[] */
+    /** @var \Walangkaji\DataTransferObject\Tests\Foo[] */
     #[CastWith(ArrayCaster::class, itemType: Foo::class)]
     public ArrayAccessIterator $collectionOfFoo;
 
-    /** @var \Spatie\DataTransferObject\Tests\Baz[] */
+    /** @var \Walangkaji\DataTransferObject\Tests\Baz[] */
     #[CastWith(ArrayCaster::class, itemType: Baz::class)]
     public ArrayAccessIterator $collectionOfBaz;
 }
 
 class DTOWithArrayObject extends DataTransferObject
 {
-    /** @var \Spatie\DataTransferObject\Tests\Foo[] */
+    /** @var \Walangkaji\DataTransferObject\Tests\Foo[] */
     #[CastWith(ArrayCaster::class, itemType: Foo::class)]
     public ArrayObject $collectionOfFoo;
 
-    /** @var \Spatie\DataTransferObject\Tests\Baz[] */
+    /** @var \Walangkaji\DataTransferObject\Tests\Baz[] */
     #[CastWith(ArrayCaster::class, itemType: Baz::class)]
     public ArrayObject $collectionOfBaz;
 }
